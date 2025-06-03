@@ -463,14 +463,15 @@ body, html {
 }
 .logo__img {
   aspect-ratio: 1;
-  width: 16px;
+  width: 24px;
 }
 .logo__name {
-  font-weight: 700;
+  font-weight: 700; 
 }
 
 :root {
   --primary: hsl(287 60% 65%);
+  /* --primary: hsl(340, 75%, 58%); */
   --primary-op: hsl(287 60% 65%/0.1);
   --gray: hsl(219 14% 71%);
   --gray-op: hsl(219 14% 71%/0.1);
