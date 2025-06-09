@@ -87,7 +87,8 @@
   aspect-ratio: 1;
 }
 .hero__image {
-  width: 350px;
+  width: 300px;
+  left: 6em;
   position: relative;
   z-index: 2;
   border-bottom: 1px solid var(--primary);
