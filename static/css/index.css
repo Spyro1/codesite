@@ -1,40 +1,7 @@
 /*!************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/styles/styles.sass ***!
   \************************************************************************************************************************/
-@font-face {
-  font-family: "Fira Code";
-  font-weight: 300;
-  font-style: normal;
-  src: url(../fonts/a81da37f7831691b78df.woff) format("woff");
-}
-
-@font-face {
-  font-family: "Fira Code";
-  font-weight: 400;
-  font-style: normal;
-  src: url(../fonts/a25d3a54ca0de3944eb7.woff) format("woff");
-}
-
-@font-face {
-  font-family: "Fira Code";
-  font-weight: 500;
-  font-style: normal;
-  src: url(../fonts/97af194ae4a793b66f40.woff) format("woff");
-}
-
-@font-face {
-  font-family: "Fira Code";
-  font-weight: 600;
-  font-style: normal;
-  src: url(../fonts/4558fb863ac61e930234.woff) format("woff");
-}
-
-@font-face {
-  font-family: "Fira Code";
-  font-weight: 700;
-  font-style: normal;
-  src: url(../fonts/e3428b597c378e1fdcb0.woff) format("woff");
-}
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
 html,
 body,
