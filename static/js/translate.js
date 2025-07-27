@@ -11,12 +11,21 @@ function setLanguage(lang) {
       elements.forEach(el => {
         const key = el.getAttribute("data-translate");
         if (translations[key]) {
-          el.textContent = translations[key];
+          // Handle different element types
+          if (el.tagName === 'META') {
+            if (el.hasAttribute('content')) {
+              el.setAttribute('content', translations[key]);
+            }
+          } else if (el.tagName === 'TITLE') {
+            el.textContent = translations[key];
+          } else {
+            el.textContent = translations[key];
+          }
         }
       });
       document.documentElement.lang = lang;
       localStorage.setItem("language", lang);   // Save selected language
-    //   label.textContent = lang;                 // Update dropdown label
+      label.textContent = lang;                 // Update dropdown label
     });
 }
 
