@@ -85,12 +85,53 @@
                 <h1 class="about-hero__title" data-translate="about_hero_title">About Me</h1>
                 <div class="about-hero__description" data-translate="about_hero_description">Passionate Computer Science
                     Student & Full-Stack Developer</div>
+                <div class="about-hero__stats">
+                    <div class="stat-item">
+                        <div class="stat-number">8+</div>
+                        <div class="stat-label" data-translate="years_coding">Years Coding</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label" data-translate="projects_completed">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label" data-translate="technologies">Technologies</div>
+                    </div>
+                </div>
             </div>
-            <img src="./static/imgs/about-me.png" alt="Marton Szenes" class="about-hero__image">
+            <div class="about-hero__visual">
+                <img src="./static/imgs/about-me.png" alt="Marton Szenes" class="about-hero__image">
+                <div class="about-hero__decorations">
+                    <img src="./static/imgs/logo-remove-bg.png" alt="" class="about-hero__logo">
+                    <svg width="100%" class="dots about-hero__dots" viewBox="0 0 80 80">
+                        <circle cx="4" cy="4" r="4"></circle>
+                        <circle cx="4" cy="28" r="4"></circle>
+                        <circle cx="4" cy="52" r="4"></circle>
+                        <circle cx="4" cy="76" r="4"></circle>
+                        <circle cx="28" cy="4" r="4"></circle>
+                        <circle cx="28" cy="28" r="4"></circle>
+                        <circle cx="28" cy="52" r="4"></circle>
+                        <circle cx="28" cy="76" r="4"></circle>
+                        <circle cx="52" cy="4" r="4"></circle>
+                        <circle cx="52" cy="28" r="4"></circle>
+                        <circle cx="52" cy="52" r="4"></circle>
+                        <circle cx="52" cy="76" r="4"></circle>
+                        <circle cx="76" cy="4" r="4"></circle>
+                        <circle cx="76" cy="28" r="4"></circle>
+                        <circle cx="76" cy="52" r="4"></circle>
+                        <circle cx="76" cy="76" r="4"></circle>
+                    </svg>
+                    <div class="about-hero__badge">
+                        <div class="badge-text" data-translate="currently_studying">Currently Studying</div>
+                        <div class="badge-detail">BME Computer Science</div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="biography" id="biography">
-            <h2 class="h2" data-translate="biography_title"><a href="#biography">Biography</a></h2>
+            <h2 class="h2" data-translate="biography_title">Biography</h2>
             <div class="biography__content">
                 <p class="biography__text" data-translate="biography_p1">
                     I am a dedicated and logic-oriented computer science student currently in my second year at Budapest
@@ -111,10 +152,17 @@
         </section>
 
         <section class="education" id="education">
-            <h2 class="h2" data-translate="education_title"><a href="#education">Education</a></h2>
+            <h2 class="h2" data-translate="education_title">Education</h2>
             <div class="education__content">
                 <div class="education__item">
-                    <div class="education__period" data-translate="education_bme_period">2023 - Present</div>
+                    <div class="education__period">
+                        <div data-translate="education_bme_period">2023 - Present</div>
+                        <div class="education__logo">
+                            <a href="https://www.bme.hu">
+                                <img src="./static/imgs/bme_logo_color.png" alt="BME Logo" class="education__logo-img">
+                            </a>
+                        </div>
+                    </div>
                     <div class="education__degree">
                         <h3 class="education__title" data-translate="education_bme_title">Bachelor of Science in
                             Computer Science Engineering</h3>
@@ -131,7 +179,7 @@
         </section>
 
         <section class="experience" id="experience">
-            <h2 class="h2" data-translate="experience_title"><a href="#experience">Experience & Projects</a></h2>
+            <h2 class="h2" data-translate="experience_title">Experience & Projects</h2>
             <div class="experience__content">
 
                 <div class="experience__item">
@@ -201,7 +249,7 @@
         </section>
 
         <section class="detailed-skills" id="skills">
-            <h2 class="h2" data-translate="detailed_skills_title"><a href="#skills">Technical Skills</a></h2>
+            <h2 class="h2" data-translate="detailed_skills_title">Technical Skills</h2>
             <div class="detailed-skills__content">
 
                 <div class="skill-category">
@@ -292,7 +340,7 @@
         </section>
 
         <section class="personal" id="interests">
-            <h2 class="h2" data-translate="personal_title"><a href="#interests">Personal Interests</a></h2>
+            <h2 class="h2" data-translate="personal_title">Personal Interests</h2>
             <div class="personal__content">
                 <div class="personal__interests">
                     <div class="interest-item">
@@ -321,7 +369,7 @@
 
         <section class="contact-cta" id="contact">
             <div class="contact-cta__content">
-                <h2 class="h2" data-translate="lets_work_together"><a href="#contact">Let's Work Together</a></h2>
+                <h2 class="h2" data-translate="lets_work_together">Let's Work Together</h2>
                 <p class="contact-cta__description" data-translate="contact_cta_description">
                     I'm always interested in new opportunities and exciting projects. Let's connect and discuss how we
                     can collaborate!

@@ -3,31 +3,135 @@
 .about-hero {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
     margin: 4rem 0;
-    min-height: 400px;
+    min-height: 500px;
+    position: relative;
 }
 
 .about-hero__content {
     flex: 1;
+    z-index: 2;
 }
 
 .about-hero__title {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 600;
     color: var(--white);
     margin-bottom: 1rem;
+    line-height: 1.2;
 }
 
 .about-hero__description {
     font-size: 1.25rem;
     color: var(--gray);
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.5;
+}
+
+.about-hero__stats {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+    min-width: 80px;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.about-hero__visual {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
 .about-hero__image {
-    max-width: 300px;
+    max-width: 450px;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    position: relative;
+}
+
+.about-hero__decorations {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.about-hero__dots {
+    position: absolute;
+    top: -30px;
+    right: -40px;
+    width: 140px;
+    height: 140px;
+    z-index: 4;
+    opacity: 0.6;
+}
+
+.about-hero__logo {
+    position: absolute;
+    width: 25vmin;
+    top: 15%;
+    left: -5%;
+    z-index: 1;
+    aspect-ratio: 1;
+    /* opacity: 0.8; */
+}
+
+.about-hero__badge {
+    position: relative;
+    background: var(--background);
+    border: 1px solid var(--gray-3);
     border-radius: 8px;
+    padding: 1rem 1.5rem;
+    min-width: 180px;
+    z-index: 3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.about-hero__badge:hover {
+    transform: translateY(-2px);
+}
+
+.badge-text {
+    font-size: 0.8rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+}
+
+.badge-detail {
+    font-size: 0.9rem;
+    color: var(--white);
+    font-weight: 600;
 }
 
 /* Biography Section */
@@ -68,6 +172,9 @@
     color: var(--primary);
     font-weight: 600;
     min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .education__degree {
@@ -89,6 +196,24 @@
 .education__description {
     color: var(--gray);
     line-height: 1.6;
+}
+
+.education__logo {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 0.75rem;
+}
+
+.education__logo-img {
+    max-width: 140px;
+    height: auto;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+}
+
+.education__logo-img:hover {
+    filter: brightness(0) saturate(100%) invert(34%) sepia(99%) saturate(407%) hue-rotate(207deg) brightness(97%) contrast(95%);
+    transition: filter 0.3s ease;
 }
 
 /* Experience Section */
@@ -332,10 +457,52 @@
     .about-hero {
         flex-direction: column;
         text-align: center;
+        gap: 2rem;
+        min-height: auto;
     }
 
     .about-hero__title {
-        font-size: 2rem;
+        font-size: 2.2rem;
+    }
+
+    .about-hero__stats {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .about-hero__visual {
+        order: -1;
+        gap: 1rem;
+    }
+
+    .about-hero__image {
+        max-width: 320px;
+    }
+
+    .about-hero__dots {
+        top: -20px;
+        right: -25px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .about-hero__logo {
+        width: 20vmin;
+        top: 10%;
+        left: -15%;
+    }
+
+    .about-hero__badge {
+        min-width: 160px;
+        padding: 0.875rem 1.25rem;
+    }
+
+    .badge-text {
+        font-size: 0.75rem;
+    }
+
+    .badge-detail {
+        font-size: 0.85rem;
     }
 
     .education__item,
@@ -347,6 +514,10 @@
     .education__period,
     .experience__period {
         min-width: auto;
+    }
+
+    .education__logo-img {
+        max-width: 50px;
     }
 
     .detailed-skills__content {
@@ -382,6 +553,16 @@
 }
 
 @media (max-width: 480px) {
+    .about-hero__logo {
+        width: 15vmin;
+        top: 5%;
+        left: -10%;
+    }
+
+    .education__logo-img {
+        max-width: 40px;
+    }
+
     .detailed-skills__content {
         grid-template-columns: 1fr;
         gap: 2rem;
